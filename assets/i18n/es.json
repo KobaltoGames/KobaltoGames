@@ -1,0 +1,38 @@
+{
+  "team": {
+    "slogan": "Nuestro lema inspirador aquí"
+  },
+  "sections": {
+    "team": "Nuestro equipo",
+    "timeline": "Nuestro recorrido",
+    "gallery": "Galería de juegos",
+    "games": "Explora nuestros juegos"
+  },
+  "games": [
+    {
+      "name": "Suppers & Daggers",
+      "desc": "Ver más"
+    },
+    {
+      "name": "Kobalto Games",
+      "desc": "Ver más"
+    }
+  ],
+  "carousel": {
+    "img1": "Escena de batalla épica",
+    "img2": "Escena de batalla"
+  },
+  "pause": "En pausa",
+  "active": "En desarrollo",
+  "gamesInfo": {
+    "suppersDesc": "Descripción breve del Juego 1",
+    "suppersWah": "Descripción breve del Juego 1"
+  },
+  "teamRoles": {
+    "programador_principal": "Programador Principal",
+    "programador": "Programador",
+    "disenadora": "Diseñadora",
+    "artista_conceptual": "Artista Conceptual",
+    "productor_artista_disenador": "Productor, Artista y Diseñador"
+  }
+}

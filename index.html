@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Kobalto Games</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+    <div id="lang-switcher" aria-label="Selector de idioma" role="navigation">
+        <button id="lang-btn" aria-haspopup="true" aria-expanded="false">ES ▼</button>
+        <ul id="lang-list" role="menu" hidden>
+            <li role="menuitem"><button data-lang="es">ES</button></li>
+            <li role="menuitem"><button data-lang="en">EN</button></li>
+        </ul>
+    </div>
+
+    <header class="header">
+        <h1>Kobalto Games</h1>
+        <p data-i18n="team.slogan"></p>
+    </header>
+
+    <main>
+        <section class="timeline">
+            <h2 data-i18n="sections.timeline"></h2>
+            <div class="timeline-bar">
+                <div class="timeline-axis" id="timeline-axis"></div>
+            </div>
+        </section>
+        <section class="equipo">
+            <h2 data-i18n="sections.team"></h2>
+            <div id="equipo-container" class="tarjetas"></div>
+        </section>
+
+        
+
+        <section class="galeria">
+            <h2 data-i18n="sections.gallery"></h2>
+            <div class="carrusel-container">
+                <button id="btn-prev" aria-label="Anterior" class="carrusel-btn carrusel-btn-left">‹</button>
+                <div id="carrusel" class="carrusel"></div>
+                <button id="btn-next" aria-label="Siguiente" class="carrusel-btn carrusel-btn-right">›</button>
+            </div>
+            <p id="caption" class="caption"></p>
+        </section>
+    </main>
+
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>

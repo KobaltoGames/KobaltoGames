@@ -1,0 +1,18 @@
+[
+  {
+    "nameKey": "games.0.name",
+    "descriptionKey": "games.0.desc",
+    "url": "juego1.html",
+    "start": 2023,
+    "end": 2025,
+    "status": "pause"
+  },
+  {
+    "nameKey": "games.1.name",
+    "descriptionKey": "games.1.desc",
+    "url": "juego2.html",
+    "start": 2024,
+    "end": 2026,
+    "status": "active"
+  }
+]

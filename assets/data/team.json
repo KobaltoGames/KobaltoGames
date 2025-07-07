@@ -1,0 +1,27 @@
+[
+  {
+    "nombre": "Luis Miguel Montell Mira",
+    "imagen": "assets/img/default.png",
+    "rol": "programador_principal"
+  },
+  {
+    "nombre": "Víctor Cristóbal Marín",
+    "imagen": "assets/img/default.png",
+    "rol": "productor_artista_disenador"
+  },
+  {
+    "nombre": "Aloma Benito Valriu",
+    "imagen": "assets/img/default.png",
+    "rol": "disenadora"
+  },
+  {
+    "nombre": "Sergio",
+    "imagen": "assets/img/default.png",
+    "rol": "programador"
+  },
+  {
+    "nombre": "Vero",
+    "imagen": "assets/img/default.png",
+    "rol": "artista_conceptual"
+  }
+]
