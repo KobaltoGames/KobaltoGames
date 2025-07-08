@@ -10,7 +10,7 @@
 
 <body>
     <div id="lang-switcher" aria-label="Selector de idioma" role="navigation">
-        <button id="lang-btn" aria-haspopup="true" aria-expanded="false">ES ▼</button>
+        <button id="lang-btn" aria-haspopup="true" aria-expanded="false" data-i18n="langSelector.label"></button>
         <ul id="lang-list" role="menu" hidden>
             <li role="menuitem"><button data-lang="es">ES</button></li>
             <li role="menuitem"><button data-lang="en">EN</button></li>
@@ -23,18 +23,16 @@
     </header>
 
     <main>
-        <section class="timeline">
+        <section id="timeline">
             <h2 data-i18n="sections.timeline"></h2>
-            <div class="timeline-bar">
-                <div class="timeline-axis" id="timeline-axis"></div>
+            <div class="timeline-grid" id="timeline-container">
             </div>
         </section>
+
         <section class="equipo">
             <h2 data-i18n="sections.team"></h2>
-            <div id="equipo-container" class="tarjetas"></div>
+            <div id="equipo-container" class="equipo-grid"></div>
         </section>
-
-        
 
         <section class="galeria">
             <h2 data-i18n="sections.gallery"></h2>

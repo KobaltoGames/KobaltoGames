@@ -1,4 +1,7 @@
 {
+  "langSelector": {
+    "label": "Idioma▼"
+  },
   "team": {
     "slogan": "Nuestro lema inspirador aquí"
   },

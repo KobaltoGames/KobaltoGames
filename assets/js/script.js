@@ -9,12 +9,10 @@ const langList = document.getElementById("lang-list");
 
 window.addEventListener("DOMContentLoaded", () => {
   cargarIdiomaInicial();
+  inicializarEventos();
 });
 
 /* CARROUSEL */
-document.getElementById("btn-prev").addEventListener("click", () => mover(-1));
-document.getElementById("btn-next").addEventListener("click", () => mover(1));
-
 async function cargarCarrusel() {
   try {
     const res = await fetch("assets/data/carousel.json");
@@ -37,8 +35,10 @@ function crearImgs() {
     imageElem.dataset.index = i;
     imageElem.style.opacity = 0;
     imageElem.style.position = "absolute";
-    imageElem.style.transition = "opacity 0.5s ease, transform 0.5s ease";
+    imageElem.style.transition = "none"; // Evita parpadeo inicial
     imageElem.style.cursor = "pointer";
+    imageElem.setAttribute("role", "button");
+    imageElem.setAttribute("tabindex", "0");
 
     imageElem.addEventListener("click", () => {
       if (i !== indice) {
@@ -54,10 +54,12 @@ function crearImgs() {
 function mostrarImagen(nuevoIndice) {
   const carrusel = document.getElementById("carrusel");
   const imgs = carrusel.querySelectorAll("img");
+  if (imgs.length === 0) return;
   if (nuevoIndice < 0) nuevoIndice = imagenes.length - 1;
   if (nuevoIndice >= imagenes.length) nuevoIndice = 0;
 
   imgs.forEach((img, i) => {
+    img.style.transition = "opacity 0.5s ease, transform 0.5s ease"; // Habilita transiciones
     img.style.opacity = 0;
     img.style.pointerEvents = "none";
     img.style.transform = "translateX(0) scale(0.8)";
@@ -109,16 +111,24 @@ async function cargarEquipo() {
     const contenedor = document.getElementById("equipo-container");
     contenedor.innerHTML = "";
 
+    let i = 1;
     equipo.forEach(miembro => {
       const tarjeta = document.createElement("div");
+      tarjeta.id = "tarjeta"+i++;
       tarjeta.className = "tarjeta";
+      // tarjeta.style.backgroundImage = `url('${miembro.imagen}')`;
 
+      setMaskImage(tarjeta, miembro.imagen);
       const rolTraducido = accederPorRuta(window.idiomaJson || {}, 'teamRoles.' + miembro.rol.toLowerCase().replace(/\s+/g, '_')) || miembro.rol;
 
+      
       tarjeta.innerHTML = `
-        <div class="avatar" style="background-image: url('${miembro.imagen}'); background-size: cover; background-position: center;"></div>
-        <h3>${miembro.nombre}</h3>
-        <p>${rolTraducido}</p>
+        <div class="fondo actual" style="background-image: url('${miembro.imagen}')"></div>
+        <div class="fondo nuevo" style="background-image: url('${miembro.imagenHover}')"></div>
+        <div class="tarjeta-texto">
+          <h3>${miembro.nombre}</h3>
+          <p>${rolTraducido}</p>
+        </div>
       `;
 
       contenedor.appendChild(tarjeta);
@@ -127,57 +137,35 @@ async function cargarEquipo() {
     console.error("Error cargando equipo:", error);
   }
 }
+function setMaskImage(tarjetaEl, miembroImagenUrl) {
+  console.log(tarjetaEl.style);
+  tarjetaEl.style.setProperty('--mask-url', `url('../../${miembroImagenUrl}')`);
+}
 
 /* TIMELINE */
 async function cargarJuegosYTimeline() {
   try {
     const res = await fetch("assets/data/games.json");
     const juegos = await res.json();
-    const anioMin = Math.min(...juegos.map(j => j.start));
-    const anioMax = Math.max(...juegos.map(j => j.end));
-    const rango = anioMax - anioMin + 1;
-
-    const contenedorTimeline = document.querySelector(".timeline-bar");
+    const contenedorTimeline = document.getElementById("timeline-container");
     contenedorTimeline.innerHTML = "";
-    const anchoDisponible = contenedorTimeline.offsetWidth;
-    let nivelesOcupados = [];
 
     juegos.forEach(juego => {
       const nombre = accederPorRuta(window.idiomaJson || {}, juego.nameKey) || juego.nameKey;
       const descripcion = accederPorRuta(window.idiomaJson || {}, juego.descriptionKey) || juego.descriptionKey;
 
-      const startOffset = (juego.start - anioMin) / rango;
-      const duration = (juego.end - juego.start + 1) / rango;
-
-      const left = startOffset * anchoDisponible;
-      const width = duration * anchoDisponible;
-
-      let nivel = 0;
-      while (nivelesOcupados.some(entry =>
-        !(left + width < entry.left || left > entry.left + entry.width) && entry.nivel === nivel
-      )) {
-        nivel++;
-      }
-      nivelesOcupados.push({ left, width, nivel });
-
       const card = document.createElement("div");
       card.className = "timeline-card";
-      card.style.left = `${left}px`;
-      card.style.width = `${width}px`;
-      card.style.top = `${nivel * 160}px`;
-
-      // card.onclick = () => window.location.href = juego.url;
 
       card.innerHTML = `
         <div class="years">${juego.start} - ${juego.end}</div>
         <h3>${nombre}</h3>
         <p>${descripcion}</p>
       `;
+
       contenedorTimeline.appendChild(card);
     });
 
-    document.querySelector(".timeline-bar").style.height =
-      `${(Math.max(...nivelesOcupados.map(n => n.nivel)) + 1) * 160}px`;
   } catch (e) {
     console.error("Error cargando juegos y timeline", e);
   }
@@ -187,10 +175,10 @@ async function cargarJuegosYTimeline() {
 function cargarIdiomaInicial() {
   const idiomaGuardado = localStorage.getItem("idioma") || "es";
   cargarIdioma(idiomaGuardado);
-  langBtn.textContent = idiomaGuardado.toUpperCase() + " ▼";
 }
 
 async function cargarIdioma(idioma) {
+  langBtn.disabled = true;
   try {
     const response = await fetch(`assets/i18n/${idioma}.json`);
     const data = await response.json();
@@ -201,6 +189,8 @@ async function cargarIdioma(idioma) {
     await renderizarContenido();
   } catch (e) {
     console.error("Error cargando idioma", e);
+  } finally {
+    langBtn.disabled = false;
   }
 }
 
@@ -214,31 +204,36 @@ function aplicarTraducciones(json) {
 }
 
 function accederPorRuta(obj, ruta) {
-  return ruta.split('.').reduce((acc, key) => acc?.[key], obj);
+  return ruta.split('.').reduce((acc, key) => acc?.[key], obj) ?? ruta;
 }
 
-/* CAMBIO DE IDIOMA */
-langBtn.addEventListener("click", () => {
-  const expanded = langBtn.getAttribute("aria-expanded") === "true";
-  langList.hidden = expanded;
-  langBtn.setAttribute("aria-expanded", !expanded);
-});
+/* CAMBIO DE IDIOMA + EVENTOS */
+function inicializarEventos() {
+  document.getElementById("btn-prev").addEventListener("click", () => mover(-1));
+  document.getElementById("btn-next").addEventListener("click", () => mover(1));
 
-langList.addEventListener("click", e => {
-  if (e.target.tagName === "BUTTON") {
-    const selectedLang = e.target.getAttribute("data-lang");
-    cargarIdioma(selectedLang);
-    langBtn.textContent = selectedLang.toUpperCase() + " ▼";
-    localStorage.setItem("idioma", selectedLang);
-  }
-});
+  langBtn.addEventListener("click", () => {
+    const expanded = langBtn.getAttribute("aria-expanded") === "true";
+    langList.hidden = expanded;
+    langBtn.setAttribute("aria-expanded", !expanded);
+  });
 
-document.addEventListener("click", e => {
-  if (!langBtn.contains(e.target) && !langList.contains(e.target)) {
-    langList.hidden = true;
-    langBtn.setAttribute("aria-expanded", "false");
-  }
-});
+  langList.addEventListener("click", e => {
+    if (e.target.tagName === "BUTTON") {
+      const selectedLang = e.target.getAttribute("data-lang");
+      cargarIdioma(selectedLang);
+      // langBtn.textContent = selectedLang.toUpperCase() + " ▼";
+      // localStorage.setItem("idioma", selectedLang);
+    }
+  });
+
+  document.addEventListener("click", e => {
+    if (!langBtn.contains(e.target) && !langList.contains(e.target)) {
+      langList.hidden = true;
+      langBtn.setAttribute("aria-expanded", "false");
+    }
+  });
+}
 
 /* RENDER GLOBAL */
 async function renderizarContenido() {

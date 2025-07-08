@@ -1,27 +1,32 @@
 [
   {
     "nombre": "Luis Miguel Montell Mira",
-    "imagen": "assets/img/default.png",
+    "imagen": "assets/img/team/LuisNormal.png",
+    "imagenHover": "assets/img/team/LuisHover.png",
     "rol": "programador_principal"
   },
   {
     "nombre": "Víctor Cristóbal Marín",
-    "imagen": "assets/img/default.png",
+    "imagen": "assets/img/team/VictorNormal.png",
+    "imagenHover": "assets/img/team/VictorHover.png",
     "rol": "productor_artista_disenador"
   },
   {
     "nombre": "Aloma Benito Valriu",
-    "imagen": "assets/img/default.png",
+    "imagen": "assets/img/team/AlomaNormal.png",
+    "imagenHover": "assets/img/team/AlomaHover.png",
     "rol": "disenadora"
   },
   {
     "nombre": "Sergio",
     "imagen": "assets/img/default.png",
+    "imagenHover": "assets/img/default.png",
     "rol": "programador"
   },
   {
     "nombre": "Vero",
-    "imagen": "assets/img/default.png",
+    "imagen": "assets/img/team/VeroNormal.png",
+    "imagenHover": "assets/img/team/VeroHover.png",
     "rol": "artista_conceptual"
   }
 ]
