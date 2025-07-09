@@ -58,29 +58,40 @@ function mostrarImagen(nuevoIndice) {
   if (nuevoIndice < 0) nuevoIndice = imagenes.length - 1;
   if (nuevoIndice >= imagenes.length) nuevoIndice = 0;
 
+  const isMobile = window.innerWidth <= 768;
+
   imgs.forEach((img, i) => {
-    img.style.transition = "opacity 0.5s ease, transform 0.5s ease"; // Habilita transiciones
+    img.className = "";
+    img.style.transition = "opacity 0.5s ease, transform 0.5s ease";
     img.style.opacity = 0;
     img.style.pointerEvents = "none";
     img.style.transform = "translateX(0) scale(0.8)";
     img.style.zIndex = "1";
   });
 
-  imgs[nuevoIndice].style.opacity = 1;
-  imgs[nuevoIndice].style.pointerEvents = "auto";
-  imgs[nuevoIndice].style.transform = "translateX(0) scale(1)";
-  imgs[nuevoIndice].style.zIndex = "10";
+  const imgCentro = imgs[nuevoIndice];
+  imgCentro.classList.add("center");
+  imgCentro.style.opacity = 1;
+  imgCentro.style.pointerEvents = "auto";
+  imgCentro.style.transform = "translateX(0) scale(1)";
+  imgCentro.style.zIndex = "10";
 
-  let leftIdx = (nuevoIndice - 1 + imagenes.length) % imagenes.length;
-  let rightIdx = (nuevoIndice + 1) % imagenes.length;
+  if (!isMobile) {
+    const leftIdx = (nuevoIndice - 1 + imagenes.length) % imagenes.length;
+    const rightIdx = (nuevoIndice + 1) % imagenes.length;
 
-  imgs[leftIdx].style.opacity = 0.7;
-  imgs[leftIdx].style.transform = "translateX(-220px) scale(0.7)";
-  imgs[leftIdx].style.zIndex = "5";
+    const imgLeft = imgs[leftIdx];
+    imgLeft.classList.add("left");
+    imgLeft.style.opacity = 0.7;
+    imgLeft.style.transform = "translateX(-220px) scale(0.7)";
+    imgLeft.style.zIndex = "5";
 
-  imgs[rightIdx].style.opacity = 0.7;
-  imgs[rightIdx].style.transform = "translateX(220px) scale(0.7)";
-  imgs[rightIdx].style.zIndex = "5";
+    const imgRight = imgs[rightIdx];
+    imgRight.classList.add("right");
+    imgRight.style.opacity = 0.7;
+    imgRight.style.transform = "translateX(220px) scale(0.7)";
+    imgRight.style.zIndex = "5";
+  }
 
   indice = nuevoIndice;
 
@@ -138,7 +149,6 @@ async function cargarEquipo() {
   }
 }
 function setMaskImage(tarjetaEl, miembroImagenUrl) {
-  console.log(tarjetaEl.style);
   tarjetaEl.style.setProperty('--mask-url', `url('../../${miembroImagenUrl}')`);
 }
 

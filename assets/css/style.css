@@ -16,25 +16,30 @@ body {
   background: #1f2937;
   box-shadow: 0 4px 10px #000;
 }
+
 .header h1 {
   font-size: 2.5rem;
 }
+
 .header p {
   font-style: italic;
   margin-top: 0.5rem;
   color: #d1d5db;
 }
 
+/* EQUIPO */
 .equipo {
   background: #1f2937;
   padding: 2rem 1rem;
   margin: auto;
 }
+
 .equipo h2 {
   text-align: center;
   font-size: 2rem;
   margin-bottom: 1rem;
 }
+
 .equipo-grid {
   /* display: grid;
   gap: 1rem;
@@ -45,6 +50,7 @@ body {
   gap: 2rem;
   padding: 2rem;
 }
+
 .tarjeta {
   position: relative;
   width: 285px;
@@ -68,7 +74,7 @@ body {
   transition: opacity 0.3s ease;
   z-index: 1;
 
-  background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
 
   mask-image: var(--mask-url);
   mask-repeat: no-repeat;
@@ -83,13 +89,14 @@ body {
 
 .tarjeta:hover::after {
   opacity: 1;
-  z-index:2;
+  z-index: 2;
 }
 
 .tarjeta:hover {
   transform: translateY(-8px);
   filter: drop-shadow(0.5rem 0.75rem 0.75rem rgba(0, 0, 0, 0.9));
 }
+
 .fondo {
   position: absolute;
   inset: 0;
@@ -99,10 +106,12 @@ body {
   opacity: 1;
   z-index: 1;
 }
+
 .fondo.nuevo {
   opacity: 0;
   z-index: 2;
 }
+
 .tarjeta-texto {
   position: absolute;
   bottom: 1.5rem;
@@ -120,24 +129,29 @@ body {
   gap: 0.3rem;
   pointer-events: none;
 }
+
 .tarjeta-texto h3 {
   font-size: 1.2rem;
   font-weight: bold;
   margin: 0;
   z-index: 3;
 }
+
 .tarjeta-texto p {
   font-size: 0.9rem;
   margin: 0;
   z-index: 3;
 }
+
 .tarjeta:hover .tarjeta-texto {
   opacity: 1;
   pointer-events: auto;
 }
+
 .tarjeta:hover .fondo.nuevo {
   opacity: 1;
 }
+
 .tarjeta:hover .fondo.actual {
   opacity: 0;
 }
@@ -145,17 +159,20 @@ body {
 #timeline {
   padding: 1rem 2rem 2rem;
 }
+
 #timeline h2 {
   text-align: center;
   font-size: 2rem;
   margin-bottom: 1rem;
 }
+
 .timeline-grid {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
   gap: 1rem;
 }
+
 .timeline-card {
   flex: 1 1 calc(30% - 2rem);
   max-width: calc(30% - 2rem);
@@ -168,6 +185,7 @@ body {
   position: relative;
   overflow: hidden;
 }
+
 .timeline-card::before {
   content: "";
   position: absolute;
@@ -180,34 +198,41 @@ body {
   border-radius: 2px;
   margin-bottom: 1rem;
 }
+
 .timeline-card:hover {
   transform: translateY(-8px);
   box-shadow: 0 12px 30px rgb(0, 0, 0);
 }
+
 .timeline-card .years {
   font-size: 0.9rem;
   font-weight: bold;
   margin-bottom: 0.75rem;
 }
+
 .timeline-card h3 {
   font-size: 1.5rem;
   margin: 0.5rem 0;
 }
+
 .timeline-card p {
   font-size: 1rem;
   line-height: 1.5;
 }
 
+/* CARROUSEL */
 .galeria {
   padding: 2rem 1rem;
   max-width: 1000px;
   margin: auto;
 }
+
 .galeria h2 {
   text-align: center;
   font-size: 2rem;
   margin-bottom: 1rem;
 }
+
 .carrusel-container {
   position: relative;
   max-width: 100%;
@@ -218,20 +243,23 @@ body {
   justify-content: center;
   gap: 1rem;
 }
+
 #carrusel {
   position: relative;
   height: 250px;
   overflow: visible;
   max-width: 100%;
 }
+
 #carrusel img {
   border-radius: 1rem;
   max-height: 250px;
   max-width: 100%;
   object-fit: cover;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
   user-select: none;
 }
+
 .carrusel {
   display: flex;
   align-items: center;
@@ -243,12 +271,13 @@ body {
   overflow: visible;
   user-select: none;
 }
+
 .carrusel img {
   position: absolute;
   border-radius: 1rem;
   cursor: pointer;
   transition: transform 0.5s ease, opacity 0.5s ease;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
   max-height: 100%;
   max-width: 250px;
   object-fit: cover;
@@ -257,24 +286,28 @@ body {
   pointer-events: none;
   z-index: 1;
 }
+
 .carrusel img.center {
   opacity: 1;
   position: relative;
   pointer-events: auto;
   transform: translateX(0) translateZ(60px) scale(1);
   z-index: 10;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
 }
+
 .carrusel img.left {
   opacity: 1;
   transform: translateX(-220px) translateZ(0) scale(0.7) rotateY(25deg);
   z-index: 5;
 }
+
 .carrusel img.right {
   opacity: 1;
   transform: translateX(220px) translateZ(0) scale(0.7) rotateY(-25deg);
   z-index: 5;
 }
+
 .carrusel img.fade-out {
   opacity: 0 !important;
   transform: translateX(0) translateZ(0) scale(0.9);
@@ -282,7 +315,9 @@ body {
   z-index: 0 !important;
   transition: opacity 0.5s ease, transform 0.5s ease;
 }
-#btn-prev, #btn-next {
+
+#btn-prev,
+#btn-next {
   background: rgba(55, 65, 81, 0.8);
   border: none;
   color: white;
@@ -294,15 +329,20 @@ body {
   user-select: none;
   transition: background-color 0.3s ease;
 }
-#btn-prev:hover, #btn-next:hover {
+
+#btn-prev:hover,
+#btn-next:hover {
   background: rgba(55, 65, 81, 1);
 }
+
 #btn-prev {
   margin-right: 1rem;
 }
+
 #btn-next {
   margin-left: 1rem;
 }
+
 .caption {
   text-align: center;
   color: #d1d5db;
@@ -312,11 +352,12 @@ body {
   user-select: none;
 }
 
-/* Tarjetas videojuegos */
+/* VIDEOJUEGOS */
 .juegos {
   padding: 2rem;
   text-align: center;
 }
+
 .juego-lista {
   display: flex;
   gap: 2rem;
@@ -324,6 +365,7 @@ body {
   flex-wrap: wrap;
   margin-top: 1rem;
 }
+
 .juego {
   background: linear-gradient(135deg, #2563eb, #1e3a8a);
   padding: 2rem;
@@ -334,69 +376,120 @@ body {
   cursor: pointer;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
 .juego:hover {
   transform: scale(1.05);
   box-shadow: 0 0 10px #3b82f6;
 }
 
-/* Idiomas */
+/* LOCALIZATION */
 #lang-switcher {
-  position: fixed;
-  top: 1rem;
-  right: 1rem;
-  font-family: sans-serif;
-  z-index: 1000;
+  position: relative;
+  display: inline-block;
+  z-index: 10;
 }
+
 #lang-btn {
-  background: #374151;
+  padding: 0.5rem 1rem;
+  background-color: #1f2937;
   color: white;
   border: none;
-  border-radius: 0.5rem;
-  padding: 0.4rem 0.8rem;
   cursor: pointer;
-  font-weight: bold;
   font-size: 1rem;
 }
+
 #lang-list {
-  margin: 0;
-  padding: 0.2rem 0;
-  list-style: none;
-  background: #374151;
-  border-radius: 0.5rem;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.6);
   position: absolute;
+  top: 100%;
   right: 0;
-  top: 2.8rem;
-  width: 60px;
-  text-align: center;
+  background-color: #1f2937;
+  border: 1px solid #333;
+  list-style: none;
+  margin: 0;
+  padding: 0.5rem 0;
+  width: max-content;
+  min-width: 100%;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
 }
-#lang-list[hidden] {
-  display: none;
-}
-#lang-list li button {
-  width: 100%;
+
+#lang-list button {
   background: none;
   border: none;
   color: white;
-  padding: 0.3rem 0;
+  padding: 0.5rem 1rem;
+  width: 100%;
+  text-align: left;
   cursor: pointer;
-  font-weight: bold;
-  font-size: 1rem;
-}
-#lang-list li button:hover,
-#lang-list li button:focus {
-  background: #2563eb;
-  outline: none;
 }
 
-/* Responsive ajustes */
+#lang-list button:hover {
+  background-color: #374151;
+}
+
+/* RESPONSIVE FIX */
+/* LOCALIZATION */
+@media (max-width: 768px) {
+  #lang-switcher {
+    width: 100%;
+  }
+
+  #lang-list {
+    right: auto;
+    left: 0;
+    width: 100%;
+    min-width: unset;
+  }
+}
+
+/* EQUIPO */
 @media (max-width: 768px) {
   .timeline-card {
     min-width: 120px;
     padding: 0.8rem;
     font-size: 0.85rem;
   }
+
   .timeline-bar {
     height: 220px;
+  }
+
+  /* CARROUSEL */
+  @media (max-width: 768px) {
+    .carrusel {
+      max-width: 100%;
+      height: auto;
+      overflow: hidden;
+    }
+
+    .carrusel img {
+      display: none !important;
+      /* Oculta todo por defecto */
+    }
+
+    .carrusel img.center {
+      display: block !important;
+      /* Solo muestra la imagen central */
+      position: relative !important;
+      transform: none !important;
+      opacity: 1 !important;
+      max-width: 100% !important;
+      max-height: 200px;
+      margin: 0 auto;
+      pointer-events: auto !important;
+      z-index: 1 !important;
+    }
+
+    .carrusel-container {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    #btn-prev,
+    #btn-next {
+      font-size: 2rem;
+      width: 40px;
+      height: 40px;
+      margin: 0.5rem;
+    }
   }
 }
