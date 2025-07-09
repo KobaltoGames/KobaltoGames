@@ -36,7 +36,6 @@ function crearImgs() {
     imageElem.style.opacity = 0;
     imageElem.style.position = "absolute";
     imageElem.style.transition = "none"; // Evita parpadeo inicial
-    imageElem.style.cursor = "pointer";
     imageElem.setAttribute("role", "button");
     imageElem.setAttribute("tabindex", "0");
 
@@ -243,6 +242,8 @@ function inicializarEventos() {
       langBtn.setAttribute("aria-expanded", "false");
     }
   });
+
+  window.addEventListener("resize", () => mostrarImagen(indice));
 }
 
 /* RENDER GLOBAL */

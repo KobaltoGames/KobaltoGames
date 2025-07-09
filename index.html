@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Kobalto Games</title>
     <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
 </head>
 
 <body>
@@ -37,9 +38,11 @@
         <section class="galeria">
             <h2 data-i18n="sections.gallery"></h2>
             <div class="carrusel-container">
-                <button id="btn-prev" aria-label="Anterior" class="carrusel-btn carrusel-btn-left">&lsaquo;</button>
                 <div id="carrusel" class="carrusel"></div>
-                <button id="btn-next" aria-label="Siguiente" class="carrusel-btn carrusel-btn-right">&rsaquo;</button>
+                <div class="carrusel-buttons-wrapper">
+                    <button id="btn-prev" aria-label="Anterior" class="carrusel-btn carrusel-btn-left">&lsaquo;</button>
+                    <button id="btn-next" aria-label="Siguiente" class="carrusel-btn carrusel-btn-right">&rsaquo;</button>
+                </div>
             </div>
             <p id="caption" class="caption"></p>
         </section>
@@ -47,5 +50,29 @@
 
     <script src="assets/js/script.js"></script>
 </body>
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-socials" aria-label="Redes sociales">
+      <a href="https://www.instagram.com/kobaltogames/" target="_blank" rel="noopener" aria-label="Instagram">
+        <img src="assets/img/icons/instagram.png" alt="Instagram" class="social-icon"/>
+      </a>
+      <a href="https://itch.io/profile/kobaltogames" target="_blank" rel="noopener" aria-label="Itch.io">
+        <img src="assets/img/icons/itchio.png" alt="Itch.io" class="social-icon"/>
+      </a>
+      <a href="https://bsky.app/profile/kobaltogames.bsky.social" target="_blank" rel="noopener" aria-label="Bluesky">
+        <img src="assets/img/icons/bluesky.png" alt="Bluesky" class="social-icon"/>
+      </a>
+      <a href="https://www.tiktok.com/@kobaltogames" target="_blank" rel="noopener" aria-label="TikTok">
+        <img src="assets/img/icons/tiktok.png" alt="Tiktok" class="social-icon"/>
+      </a>
+      <!-- <a href="" target="_blank" rel="noopener" aria-label="Discord">
+        <img src="assets/img/icons/discord.png" alt="Discord" class="social-icon"/>
+      </a> -->
+    </div>
+    <div class="footer-text">
+      &copy; 2025 KobaltoGames. Todos los derechos reservados.
+    </div>
+  </div>
+</footer>
 
 </html>
