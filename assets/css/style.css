@@ -14,6 +14,11 @@ body {
   text-align: center;
   padding: 2rem;
   background: #1f2937;
+  /* background-image: url("./../img/display/image.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden; */
   box-shadow: 0 4px 10px #000;
 }
 
@@ -29,9 +34,14 @@ body {
 
 /* EQUIPO */
 .equipo {
-  background: #1f2937;
+  /* background: #1f2937; */
   padding: 2rem 1rem;
   margin: auto;
+  background-image: url("./../img/display/fondoOurTeam.jpg");
+  background-size: auto;
+  background-position: center;
+  background-repeat: repeat;
+  overflow: hidden;
 }
 
 .equipo h2 {
@@ -394,7 +404,7 @@ body {
 
 /* LOCALIZATION */
 #lang-switcher {
-  position: relative;
+  position: absolute;
   display: inline-block;
   z-index: 10;
 }
@@ -443,6 +453,7 @@ body {
   padding: 1.5rem 1rem;
   font-size: 0.9rem;
   user-select: none;
+  box-shadow: 0 4px 20px #000;
 }
 
 .footer-container {
@@ -480,9 +491,9 @@ body {
 /* RESPONSIVE FIX */
 /* LOCALIZATION */
 @media (max-width: 768px) {
-  #lang-switcher {
+  /* #lang-switcher {
     width: 100%;
-  }
+  } */
 
   #lang-list {
     right: auto;
