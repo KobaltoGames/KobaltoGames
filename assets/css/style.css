@@ -145,13 +145,11 @@ body {
   font-size: 1.2rem;
   font-weight: bold;
   margin: 0;
-  z-index: 3;
 }
 
 .tarjeta-texto p {
   font-size: 0.9rem;
   margin: 0;
-  z-index: 3;
 }
 
 .tarjeta:hover .tarjeta-texto {
@@ -161,10 +159,6 @@ body {
 
 .tarjeta:hover .fondo.nuevo {
   opacity: 1;
-}
-
-.tarjeta:hover .fondo.actual {
-  opacity: 0;
 }
 
 #timeline {
