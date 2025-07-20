@@ -558,6 +558,20 @@ body {
   }
 }
 
+@media (max-width: 768px) {
+  .tarjeta {
+    width: 260px;
+    height: 275px;
+  }
+}
+
+@media (max-width: 400px) {
+  .tarjeta {
+    width: 230px;
+    height: 245px;
+  }
+}
+
 /* FOOTER */
 @media (max-width: 768px) {
   .footer-container {
