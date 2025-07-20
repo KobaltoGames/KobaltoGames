@@ -560,7 +560,7 @@ body {
 
 @media (max-width: 768px) {
   .tarjeta {
-    width: 240px; 
+    width: 240px;
     height: 255px;
   }
 }
