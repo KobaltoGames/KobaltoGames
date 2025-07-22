@@ -1,0 +1,80 @@
+#timeline {
+  padding: 1rem 2rem 2rem;
+  /* background-image: url("./../img/display/fondoTimeline.jpg");
+  background-size: auto;
+  background-position: center;
+  background-repeat: repeat;
+  overflow: hidden; */
+}
+
+#timeline h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.timeline-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 1rem;
+}
+
+.timeline-card {
+  flex: 1 1 calc(30% - 2rem);
+  max-width: calc(30% - 2rem);
+  background-color: #111827;
+  padding: 2rem;
+  border-radius: 1.25rem;
+  box-shadow: 0 2px 5px rgb(0, 0, 0);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.timeline-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 4px;
+  width: 60px;
+  background: #007bff;
+  border-radius: 2px;
+  margin-bottom: 1rem;
+}
+
+.timeline-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgb(0, 0, 0);
+}
+
+.timeline-card .years {
+  font-size: 0.9rem;
+  font-weight: bold;
+  margin-bottom: 0.75rem;
+}
+
+.timeline-card h3 {
+  font-size: 1.5rem;
+  margin: 0.5rem 0;
+}
+
+.timeline-card p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .timeline-card {
+    min-width: 120px;
+    padding: 0.8rem;
+    font-size: 0.85rem;
+  }
+
+  .timeline-bar {
+    height: 220px;
+  }
+}

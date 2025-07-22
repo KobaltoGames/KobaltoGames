@@ -1,0 +1,140 @@
+.equipo {
+  background: #1f2937;
+  padding: 2rem 1rem;
+  margin: auto;
+  /* background-image: url("./../img/display/fondoOurTeam.jpg");
+  background-size: auto;
+  background-position: center;
+  background-repeat: repeat;
+  overflow: hidden; */
+}
+
+.equipo h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.equipo-grid {
+  /* display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.tarjeta {
+  position: relative;
+  width: 285px;
+  height: 300px;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  filter: drop-shadow(0 0 0.75rem rgba(0, 0, 0, 0.7));
+  transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.tarjeta::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1;
+
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+
+  mask-image: var(--mask-url);
+  mask-repeat: no-repeat;
+  mask-position: center bottom;
+  mask-size: cover;
+
+  -webkit-mask-image: var(--mask-url);
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center bottom;
+  -webkit-mask-size: cover;
+}
+
+.tarjeta:hover::after {
+  opacity: 1;
+  z-index: 2;
+}
+
+.tarjeta:hover {
+  transform: translateY(-8px);
+  filter: drop-shadow(0.5rem 0.75rem 0.75rem rgba(0, 0, 0, 0.9));
+}
+
+.fondo {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  transition: opacity 0.3s ease;
+  opacity: 1;
+  z-index: 1;
+}
+
+.fondo.nuevo {
+  opacity: 0;
+  z-index: 2;
+}
+
+.tarjeta-texto {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 70%;
+  color: #fff;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 3;
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  pointer-events: none;
+}
+
+.tarjeta-texto h3 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.tarjeta-texto p {
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.tarjeta:hover .tarjeta-texto {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.tarjeta:hover .fondo.nuevo {
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .tarjeta {
+    width: 240px;
+    height: 255px;
+  }
+}
+
+@media (max-width: 400px) {
+  .tarjeta {
+    width: 180px;
+    height: 195px;
+  }
+}
