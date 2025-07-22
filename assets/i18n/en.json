@@ -3,7 +3,8 @@
     "label": "Language▼"
   },
   "team": {
-    "slogan": "Wah!ntastic Games"
+    "slogan": "Wah!ntastic Games",
+    "aboutUs": "We are Kobalto Games, a small indie studio located in Spain, formed by a group of friends who create quirky worlds one pixel at a time. Whether we're organizing chaos or watching tiny kobolds make big messes, we're all about creating unique and charming worlds."
   },
   "sections": {
     "team": "Our Team",
@@ -17,7 +18,7 @@
       "desc": "See more"
     },
     {
-      "name": "Kobalto Games",
+      "name": "Wah!Topia",
       "desc": "See more"
     }
   ],
@@ -37,5 +38,6 @@
     "disenadora": "Designer",
     "artista_conceptual": "Concept Artist",
     "productor_artista_disenador": "Producer, Artist and Designer"
-  }
+  },
+  "rights": "&copy; 2025 KobaltoGames. All rights reserved."
 }

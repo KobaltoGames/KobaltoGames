@@ -5,7 +5,8 @@
     "url": "juego1.html",
     "start": 2023,
     "end": 2025,
-    "status": "pause"
+    "status": "pause",
+    "icon": "assets/img/games/Suppers&Daggers.png"
   },
   {
     "nameKey": "games.1.name",
@@ -13,6 +14,7 @@
     "url": "juego2.html",
     "start": 2024,
     "end": 2026,
-    "status": "active"
+    "status": "active",
+    "icon": "assets/img/games/Wah!Topia.png"
   }
 ]

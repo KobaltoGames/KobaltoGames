@@ -166,10 +166,11 @@ async function cargarJuegosYTimeline() {
       const card = document.createElement("div");
       card.className = "timeline-card";
 
+      // <div class="years">${juego.start} - ${juego.end}</div>
+      // <p>${descripcion}</p>
       card.innerHTML = `
-        <div class="years">${juego.start} - ${juego.end}</div>
+        <img class="gameIcon" src="${juego.icon}" alt="${nombre}">
         <h3>${nombre}</h3>
-        <p>${descripcion}</p>
       `;
 
       contenedorTimeline.appendChild(card);

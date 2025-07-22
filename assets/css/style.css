@@ -5,21 +5,26 @@
 body {
   margin: 0;
   background: #111827;
-  /* background-image: url("./../img/display/fondoTimeline.jpg");
+  /* background-image: url("./../img/display/fondoOurTeam.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed; */
-  /* overflow: hidden; */
   color: white;
   font-family: sans-serif;
-  /* overflow-x: hidden; */
+  overflow-x: hidden;
+}
+
+#header {
+  position: sticky;
+  top: 0px;
+  z-index: 10;
 }
 
 .title {
   text-align: center;
-  padding: 2rem;
-  /* background: #1f2937; */
+  /* padding: 2rem; */
+  height: auto;
   background-image: url("./../img/display/fondoHeader.png");
   background-size: cover;
   background-position: center;
@@ -30,11 +35,12 @@ body {
 
 .title h1 {
   font-size: 2.5rem;
+  margin-bottom: 0.5rem;
 }
 
 .title p {
   font-style: italic;
-  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
   font-size: 1.25rem;
   /* color: #d1d5db; */
 }
@@ -48,7 +54,7 @@ body {
 }
 
 #lang-btn {
-  padding: 0.5rem 1rem;
+  padding: 0.25rem 0.5rem;
   background-color: #ec820ad5;
   color: white;
   border: none;
@@ -86,7 +92,7 @@ body {
 
 /* FOOTER */
 .footer {
-  background-color: #1f2937;
+  background-color: #1b2741;
   color: #d1d5db;
   padding: 1.5rem 1rem;
   font-size: 0.9rem;
