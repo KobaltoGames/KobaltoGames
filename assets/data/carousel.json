@@ -1,26 +1,26 @@
 [
   {
-    "src": "assets/img/display/default.png",
-    "caption": "carousel.img1"
+    "src": "assets/img/carousel/G1.png",
+    "caption": "carousel.G1"
   },
   {
-    "src": "assets/img/display/S&D_Logo.png",
-    "caption": "carousel.img2"
+    "src": "assets/img/carousel/G2.png",
+    "caption": "carousel.G2"
   },
   {
-    "src": "assets/img/display/default.png",
-    "caption": "carousel.img1"
+    "src": "assets/img/carousel/G3.png",
+    "caption": "carousel.G3"
   },
   {
-    "src": "assets/img/display/S&D_Logo.png",
-    "caption": "carousel.img2"
+    "src": "assets/img/carousel/G4.png",
+    "caption": "carousel.G4"
   },
   {
-    "src": "assets/img/display/S&D_Logo.png",
-    "caption": "carousel.img1"
+    "src": "assets/img/carousel/G5.gif",
+    "caption": "carousel.G5"
   },
   {
-    "src": "assets/img/display/S&D_Logo.png",
-    "caption": "carousel.img2"
+    "src": "assets/img/carousel/S&D_Logo.png",
+    "caption": "carousel.S&D_Logo"
   }
 ]

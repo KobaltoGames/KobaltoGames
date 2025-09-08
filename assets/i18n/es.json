@@ -23,8 +23,12 @@
     }
   ],
   "carousel": {
-    "img1": "Escena de batalla épica",
-    "img2": "Escena de batalla"
+    "G1": "Wah!Topia gameplay visual 1",
+    "G2": "Wah!Topia gameplay visual 2",
+    "G3": "Wah!Topia gameplay visual 3",
+    "G4": "Wah!Topia gameplay visual 4",
+    "G5": "Wah!Topia gameplay gif",
+    "S&D_Logo": "Suppers&Daggers Icono"
   },
   "pause": "En pausa",
   "active": "En desarrollo",

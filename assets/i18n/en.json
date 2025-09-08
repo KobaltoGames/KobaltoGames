@@ -23,8 +23,12 @@
     }
   ],
   "carousel": {
-    "img1": "Epic battle scene",
-    "img2": "Battle scene"
+    "G1": "Wah!Topia gameplay sample 1",
+    "G2": "Wah!Topia gameplay sample 2",
+    "G3": "Wah!Topia gameplay sample 3",
+    "G4": "Wah!Topia gameplay sample 4",
+    "G5": "Wah!Topia gameplay gif",
+    "S&D_Logo": "Suppers&Daggers Icon"
   },
   "pause": "Paused",
   "active": "In development",
@@ -39,5 +43,5 @@
     "artista_conceptual": "Concept Artist",
     "productor_artista_disenador": "Producer, Artist and Designer"
   },
-  "rights": "&copy; 2025 KobaltoGames. All rights reserved."
+  "rights": "2025 KobaltoGames. All rights reserved."
 }

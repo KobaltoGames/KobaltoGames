@@ -38,6 +38,10 @@ body {
   margin-bottom: 0.5rem;
 }
 
+.title img {
+  width: 300px;
+}
+
 .title p {
   font-style: italic;
   margin-bottom: 0.5rem;
