@@ -2,9 +2,15 @@
   "langSelector": {
     "label": "Idioma▼"
   },
+  "nav": {
+    "timeline": "Nuestro Recorrido",
+    "team": "Equipo",
+    "gallery": "Galería"
+  },
   "team": {
     "slogan": "Videojuegos Wah!ntasticos",
-    "aboutUs": "Somos Kobalto Games, un pequeño estudio indie ubicado en España, formado por un grupo de amigos que crean mundos extraños píxel a píxel. Ya sea organizando el caos o viendo a pequeños kobolds hacer grandes desastres, lo nuestro es crear mundos únicos y encantadores. "
+    "aboutUs": "Somos Kobalto Games, un pequeño estudio indie ubicado en España, formado por un grupo de amigos que crean mundos extraños píxel a píxel. Ya sea organizando el caos o viendo a pequeños kobolds hacer grandes desastres, lo nuestro es crear mundos únicos y encantadores. ",
+    "steam": "Steam"
   },
   "sections": {
     "team": "Nuestro equipo",
@@ -33,8 +39,30 @@
   "pause": "En pausa",
   "active": "En desarrollo",
   "gamesInfo": {
-    "suppersDesc": "Descripción breve del Juego 1",
-    "suppersWah": "Descripción breve del Juego 1"
+    "suppersDesc": "Suppers & Daggers es un RPG táctico donde el caos se encuentra con la estrategia. Lidera a tus daggers en misiones llenas de sorpresas y combate por turnos.",
+    "suppersWah": "Wah!Topia es un RPG de aventura en un mundo pixelado lleno de misterios. Explora tierras desconocidas, resuelve puzzles y descubre la verdad detrás del reino."
+  },
+  "gameDetails": {
+    "yearStart": "Año de inicio",
+    "yearEnd": "Año de fin",
+    "status": "Estado",
+    "developer": "Desarrollador",
+    "genre": "Género",
+    "team": "Equipo"
+  },
+  "gamesMeta": {
+    "suppers": {
+      "name": "Suppers & Daggers",
+      "tagline": "El caos organizado",
+      "desc": "Suppers & Daggers es un mundo donde las cartas y los daggers se enfrentan en batallas tácticas. Explora misiones, reúne aliados y conquista el caos.",
+      "genre": "RPG / Acción"
+    },
+    "wahTopia": {
+      "name": "Wah!Topia",
+      "tagline": "Un mundo por descubrir",
+      "desc": "Wah!Topia es un reino en crisis. Viaja por paisajes pixelados, descubre secretos antiguos y salva el mundo de la oscuridad.",
+      "genre": "RPG / Aventura"
+    }
   },
   "teamRoles": {
     "programador_principal": "Programador Principal",

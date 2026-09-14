@@ -2,9 +2,15 @@
   "langSelector": {
     "label": "Language▼"
   },
+  "nav": {
+    "timeline": "Our Journey",
+    "team": "Team",
+    "gallery": "Gallery"
+  },
   "team": {
     "slogan": "Wah!ntastic Games",
-    "aboutUs": "We are Kobalto Games, a small indie studio located in Spain, formed by a group of friends who create quirky worlds one pixel at a time. Whether we're organizing chaos or watching tiny kobolds make big messes, we're all about creating unique and charming worlds."
+    "aboutUs": "We are Kobalto Games, a small indie studio located in Spain, formed by a group of friends who create quirky worlds one pixel at a time. Whether we're organizing chaos or watching tiny kobolds make big messes, we're all about creating unique and charming worlds.",
+    "steam": "Steam"
   },
   "sections": {
     "team": "Our Team",
@@ -33,8 +39,30 @@
   "pause": "Paused",
   "active": "In development",
   "gamesInfo": {
-    "suppersDesc": "Brief description of Game 1",
-    "suppersWah": "Brief description of Game 1"
+    "suppersDesc": "Suppers & Daggers is a tactical RPG where chaos meets strategy. Lead your daggers on missions full of surprises and turn-based combat.",
+    "suppersWah": "Wah!Topia is an adventure RPG in a pixelated world full of mysteries. Explore unknown lands, solve puzzles, and discover the truth behind the kingdom."
+  },
+  "gameDetails": {
+    "yearStart": "Year started",
+    "yearEnd": "Year ended",
+    "status": "Status",
+    "developer": "Developer",
+    "genre": "Genre",
+    "team": "Team"
+  },
+  "gamesMeta": {
+    "suppers": {
+      "name": "Suppers & Daggers",
+      "tagline": "Organized chaos",
+      "desc": "Suppers & Daggers is a world where cards and daggers face off in tactical battles. Explore missions, rally allies, and conquer the chaos.",
+      "genre": "RPG / Action"
+    },
+    "wahTopia": {
+      "name": "Wah!Topia",
+      "tagline": "A world to discover",
+      "desc": "Wah!Topia is a kingdom in crisis. Travel through pixelated landscapes, discover ancient secrets, and save the world from darkness.",
+      "genre": "RPG / Adventure"
+    }
   },
   "teamRoles": {
     "programador_principal": "Lead Programmer",
@@ -43,5 +71,5 @@
     "artista_conceptual": "Concept Artist",
     "productor_artista_disenador": "Producer, Artist and Designer"
   },
-  "rights": "2025 KobaltoGames. All rights reserved."
+  "rights": "2026 KobaltoGames. All rights reserved."
 }

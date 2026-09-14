@@ -4,47 +4,99 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Kobalto Games - Estudio indie español creando mundos únicos con juegos como Suppers & Daggers y Wah!Topia" />
+  <meta name="keywords" content="Kobalto Games, indie games, videojuegos, Suppers & Daggers, Wah!Topia, game studio" />
+  <meta name="author" content="Kobalto Games" />
+  <meta property="og:title" content="Kobalto Games" />
+  <meta property="og:description" content="Estudio indie español creando mundos únicos píxel a píxel" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/img/display/KobaltoGames.png" />
+  <meta property="og:url" content="https://kobaltogames.com" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Kobalto Games" />
+  <meta name="twitter:description" content="Estudio indie español creando mundos únicos" />
   <title>Kobalto Games</title>
   <link rel="stylesheet" href="assets/css/style.css" />
   <link rel="stylesheet" href="assets/css/timelineStyle.css" />
   <link rel="stylesheet" href="assets/css/equipoStyle.css" />
   <link rel="stylesheet" href="assets/css/galeriaStyle.css" />
+  <link rel="stylesheet" href="assets/css/skeleton.css" />
   <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 
 <body>
-  <header id="header">
-    <div id="lang-switcher" aria-label="Selector de idioma" role="navigation">
-      <button id="lang-btn" aria-haspopup="true" aria-expanded="false" data-i18n="langSelector.label"></button>
-      <ul id="lang-list" role="menu" hidden>
-        <li role="menuitem"><button data-lang="es">ES</button></li>
-        <li role="menuitem"><button data-lang="en">EN</button></li>
-      </ul>
+  <a href="#main-content" class="skip-link">Saltar al contenido</a>
+
+  <div class="bg-particles" aria-hidden="true"></div>
+
+  <nav class="navbar" id="navbar">
+    <a href="#header" class="navbar-logo">
+      <img src="assets/img/display/KobaltoGames.png" alt="Kobalto Games Logo">
+    </a>
+    <ul class="navbar-links" id="navLinks">
+      <li><a href="#timeline" class="nav-link" data-i18n="nav.timeline"></a></li>
+      <li><a href="#equipo" class="nav-link" data-i18n="nav.team"></a></li>
+      <li><a href="#galeria" class="nav-link" data-i18n="nav.gallery"></a></li>
+    </ul>
+    <div class="navbar-actions">
+      <div id="lang-switcher" aria-label="Selector de idioma" role="navigation">
+        <button id="lang-btn" aria-haspopup="true" aria-expanded="false">ES ▼</button>
+        <ul id="lang-list" role="menu" hidden>
+          <li role="menuitem"><button data-lang="es">ES</button></li>
+          <li role="menuitem"><button data-lang="en">EN</button></li>
+        </ul>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Menú de navegación">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </div>
+  </nav>
+
+  <header id="header">
     <div class="title">
-      <!-- <h1>Kobalto Games</h1> -->
-       <img src="assets/img/display/KobaltoGames.png" alt="Kobalto Games">
+      <br>
+      <img src="assets/img/display/KobaltoGames.png" alt="Kobalto Games">
       <p data-i18n="team.slogan"></p>
+      <div class="hero-cta">
+        <a href="https://store.steampowered.com/search/?developer=Kobalto%20Games" target="_blank" rel="noopener" aria-label="Ver en Steam" class="steam-link">
+          <button type="button" class="steam-btn">
+            <img src="assets/img/icons/steam.png" alt="Steam" class="social-icon" />
+            <span data-i18n="team.steam">Ver en Steam</span>
+          </button>
+        </a>
+      </div>
     </div>
   </header>
 
-  <main>
-    <section id="timeline">
+  <main id="main-content">
+    <section id="timeline" class="fade-in">
       <h2 data-i18n="sections.timeline"></h2>
       <p data-i18n="team.aboutUs"></p>
       <div class="timeline-grid" id="timeline-container">
+        <div class="skeleton skeleton-card" data-skeleton="timeline"></div>
+        <div class="skeleton skeleton-card" data-skeleton="timeline"></div>
+        <div class="skeleton skeleton-card" data-skeleton="timeline"></div>
       </div>
     </section>
 
-    <section class="equipo">
+    <section class="equipo fade-in" id="equipo">
       <h2 data-i18n="sections.team"></h2>
-      <div id="equipo-container" class="equipo-grid"></div>
+      <div id="equipo-container" class="equipo-grid">
+        <div class="skeleton skeleton-card" data-skeleton="team"></div>
+        <div class="skeleton skeleton-card" data-skeleton="team"></div>
+        <div class="skeleton skeleton-card" data-skeleton="team"></div>
+        <div class="skeleton skeleton-card" data-skeleton="team"></div>
+        <div class="skeleton skeleton-card" data-skeleton="team"></div>
+      </div>
     </section>
 
-    <section class="galeria">
+    <section class="galeria fade-in" id="galeria">
       <h2 data-i18n="sections.gallery"></h2>
       <div class="carrusel-container">
-        <div id="carrusel" class="carrusel"></div>
+        <div id="carrusel" class="carrusel">
+        </div>
         <div class="carrusel-buttons-wrapper">
           <button id="btn-prev" aria-label="Anterior" class="carrusel-btn carrusel-btn-left">&lsaquo;</button>
           <button id="btn-next" aria-label="Siguiente" class="carrusel-btn carrusel-btn-right">&rsaquo;</button>
@@ -54,8 +106,13 @@
     </section>
   </main>
 
+  <button class="scroll-top-btn" id="scrollTopBtn" aria-label="Volver arriba">
+    ↑
+  </button>
+
   <script src="assets/js/script.js"></script>
 </body>
+
 <footer class="footer">
   <div class="footer-container">
     <div class="footer-socials" aria-label="Redes sociales">
@@ -65,15 +122,15 @@
       <a href="https://itch.io/profile/kobaltogames" target="_blank" rel="noopener" aria-label="Itch.io">
         <img src="assets/img/icons/itchio.png" alt="Itch.io" class="social-icon" />
       </a>
+      <a href="https://www.youtube.com/@KobaltoGames" target="_blank" rel="noopener" aria-label="Youtube">
+        <img src="assets/img/icons/youtube.png" alt="YouTube" class="social-icon" />
+      </a>
       <a href="https://bsky.app/profile/kobaltogames.bsky.social" target="_blank" rel="noopener" aria-label="Bluesky">
         <img src="assets/img/icons/bluesky.png" alt="Bluesky" class="social-icon" />
       </a>
       <a href="https://www.tiktok.com/@kobaltogames" target="_blank" rel="noopener" aria-label="TikTok">
         <img src="assets/img/icons/tiktok.png" alt="Tiktok" class="social-icon" />
       </a>
-      <!-- <a href="" target="_blank" rel="noopener" aria-label="Discord">
-        <img src="assets/img/icons/discord.png" alt="Discord" class="social-icon"/>
-      </a> -->
     </div>
     <div class="footer-text">
       &copy; <span data-i18n="rights"></span>

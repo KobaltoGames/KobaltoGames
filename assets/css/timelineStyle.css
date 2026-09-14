@@ -1,32 +1,24 @@
 #timeline {
-  padding: 1rem 2rem 2rem;
-  /* background-image: url("./../img/display/fondoTimeline.jpg");
-  background-size: auto;
-  background-position: center;
-  background-repeat: repeat;
-  overflow: hidden; */
+  padding: var(--xxl) var(--lg) var(--xl);
+  background: linear-gradient(180deg, var(--bg) 0%, rgba(27,39,65,0.5) 100%);
+  position: relative;
 }
-
-#timeline h2 {
-  text-align: center;
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
-
 #timeline p {
   text-align: center;
   margin: auto;
   max-width: 70%;
-  font-size: 1rem;
-  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  color: var(--text2);
+  margin-bottom: var(--xl);
+  line-height: 1.7;
 }
 
 .timeline-grid {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
-  gap: 1rem;
-  padding: 2rem;
+  justify-content: center;
+  gap: var(--lg);
+  padding: var(--md);
 }
 
 .timeline-card {
@@ -35,70 +27,105 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-width: 180px;
+  min-width: 220px;
   max-width: calc(20% - 3rem);
-  /* background-color: #111827; */
-  background-image: url("./../img/games/FondoCardGames.jpg");
+  background: linear-gradient(135deg, rgba(31,41,55,0.8), rgba(17,24,39,0.9));
+  background-image: url('../img/games/FondoCardGames.jpg');
   background-size: 120% auto;
   background-position: center;
   background-repeat: no-repeat;
-  overflow: hidden;
-  padding: 0.75em;
-  border-radius: 1.25rem;
-  box-shadow: 0 2px 5px rgb(0, 0, 0);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: var(--md);
+  border-radius: var(--rl);
+  box-shadow: var(--sh2);
+  transition: transform var(--t2), box-shadow var(--t2), border-color var(--t2);
   text-align: center;
-  color: #5b3118;
+  color: var(--text);
   position: relative;
   overflow: hidden;
+  cursor: pointer;
+  will-change: transform;
+  text-decoration: none;
+  color: inherit;
+}
+
+.timeline-card-color {
+  color: var(--text4) !important;
 }
 
 .timeline-card::before {
-  content: "";
+  content: '';
   position: absolute;
-  top: 0;
-  left: 50%;
+  top: 0; left: 50%;
   transform: translateX(-50%);
-  height: 4px;
-  width: 60px;
-  background: #007bff;
+  height: 4px; width: 60px;
+  background: linear-gradient(90deg, var(--accent), transparent);
   border-radius: 2px;
-  margin-bottom: 1rem;
+  margin-bottom: var(--sm);
 }
+
+.timeline-card::after {
+  content: '';
+  position: absolute; inset: 0;
+  background: linear-gradient(135deg, rgba(236,130,10,0.05), transparent);
+  opacity: 0;
+  transition: opacity var(--t2);
+  pointer-events: none;
+  z-index: 0;
+}
+.timeline-card:hover::after { opacity: 1; }
 
 .timeline-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 12px 30px rgb(0, 0, 0);
+  box-shadow: var(--sh3), var(--shg);
+  z-index: 2;
+  border-color: transparent;
+}
+.timeline-card:active {
+  transform: translateY(-2px) scale(0.98);
+  transition-duration: 0.1s;
 }
 
 .timeline-card .years {
-  font-size: clamp(15px, 0.9vw, 24px);
-  font-weight: bold;
-  margin-bottom: 0.75rem;
+  font-family: var(--font-h);
+  font-size: clamp(14px,0.9vw,20px);
+  font-weight: 600;
+  margin-bottom: var(--xs);
+  color: var(--accent);
 }
-
 .timeline-card h3 {
-  font-size: clamp(20px, 1.5vw, 24px);
-  margin: 0.5rem 0;
+  font-family: var(--font-h);
+  font-size: clamp(18px,1.5vw,22px);
+  margin: var(--xs) 0;
+  font-weight: 700;
 }
-
 .timeline-card p {
-  font-size: clamp(17px, 1vw, 24px);
+  font-size: clamp(14px,1vw,18px);
   line-height: 1.5;
+  color: var(--text2);
 }
-
 .timeline-card .gameIcon {
   width: 100%;
+  max-width: 120px;
+  border-radius: var(--rm);
+  margin-bottom: var(--sm);
+  box-shadow: var(--sh1);
+}
+
+.timeline-card.no-link {
+  cursor: default;
+  pointer-events: none;
+}
+.timeline-card.no-link:hover {
+  transform: none;
+  box-shadow: var(--sh2);
+}
+.timeline-card.no-link:active {
+  transform: none;
 }
 
 @media (max-width: 768px) {
-  .timeline-card {
-    min-width: 150px;
-    /* padding: 0.8rem; */
-    /* font-size: 0.85rem; */
-  }
-
-  .timeline-bar {
-    height: 220px;
-  }
+  .timeline-card { min-width: 160px; max-width: calc(50% - 2rem); }
+}
+@media (max-width: 480px) {
+  .timeline-card { min-width: 140px; max-width: 100%; }
 }

@@ -16,17 +16,5 @@
     "imagen": "assets/img/team/AlomaNormal.png",
     "imagenHover": "assets/img/team/AlomaHover.png",
     "rol": "disenadora"
-  },
-  {
-    "nombre": "Sergio de la Fuente Ramos",
-    "imagen": "assets/img/team/SergioNormal.png",
-    "imagenHover": "assets/img/team/SergioHover.png",
-    "rol": "programador"
-  },
-  {
-    "nombre": "Verónica Padovano (Vero)",
-    "imagen": "assets/img/team/VeroNormal.png",
-    "imagenHover": "assets/img/team/VeroHover.png",
-    "rol": "artista_conceptual"
   }
 ]

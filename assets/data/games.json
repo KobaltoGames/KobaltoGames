@@ -1,17 +1,17 @@
 [
   {
-    "nameKey": "games.0.name",
-    "descriptionKey": "games.0.desc",
-    "url": "juego1.html",
+    "nameKey": "gamesMeta.suppers.name",
+    "descriptionKey": "gamesInfo.suppersDesc",
+    "url": null,
     "start": 2023,
     "end": 2025,
     "status": "pause",
     "icon": "assets/img/games/Suppers&Daggers.png"
   },
   {
-    "nameKey": "games.1.name",
-    "descriptionKey": "games.1.desc",
-    "url": "juego2.html",
+    "nameKey": "gamesMeta.wahTopia.name",
+    "descriptionKey": "gamesInfo.suppersWah",
+    "url": "https://store.steampowered.com/app/4548090/WahTopia/",
     "start": 2024,
     "end": 2026,
     "status": "active",
