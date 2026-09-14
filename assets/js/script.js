@@ -298,7 +298,7 @@ async function cargarIdioma(idioma) {
     aplicarTraducciones(data)
     localStorage.setItem("idioma", idioma)
     langBtn.textContent = idioma.toUpperCase() + " ▼"
-    const isIndex = window.location.pathname.includes("index.html") || window.location.pathname === "/"
+    const isIndex = document.getElementById("timeline-container") || document.getElementById("equipo-container") || document.getElementById("carrusel")
     if (isIndex) await renderizarContenido()
   } catch (e) {
     console.error("Error idioma:", e)
